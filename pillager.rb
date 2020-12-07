@@ -2,25 +2,20 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.1.10"
+  version "0.2.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.1.10/pillager_0.1.10_Darwin_x86_64.tar.gz"
-    sha256 "0df4f13d20c7d8a6aa14a44dbeede28cfa5c47dd5c2d1cbcff0a50b9ff465d53"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.2.0/pillager_0.2.0_Darwin_x86_64.tar.gz"
+    sha256 "162b41557ddda828bae485d1b9b774e2b962f647f86e886e017895e1825ec3dd"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.1.10/pillager_0.1.10_Linux_x86_64.tar.gz"
-    sha256 "b73db8d05785faee6d8d151d36333accdac7324ef60620b0cf96bf25bb65ad18"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.2.0/pillager_0.2.0_Linux_x86_64.tar.gz"
+    sha256 "7f8836a5b0a971c9272c8ba17d0adcd87dfd936d31f983a60b3460ff65443ec6"
   end
 
   def install
     bin.install "pillager"
-  end
-
-  def caveats; <<~EOS
-    How to use this binary
-  EOS
   end
 end
