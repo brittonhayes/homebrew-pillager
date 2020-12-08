@@ -2,17 +2,17 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.2.0/pillager_0.2.0_Darwin_x86_64.tar.gz"
-    sha256 "162b41557ddda828bae485d1b9b774e2b962f647f86e886e017895e1825ec3dd"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.3.0/pillager_0.3.0_Darwin_x86_64.tar.gz"
+    sha256 "b0b47ab8cbc62d465ce4fd02f829b474a66e8b95fc4f9a61ea869eda1831a6fb"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.2.0/pillager_0.2.0_Linux_x86_64.tar.gz"
-    sha256 "7f8836a5b0a971c9272c8ba17d0adcd87dfd936d31f983a60b3460ff65443ec6"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.3.0/pillager_0.3.0_Linux_x86_64.tar.gz"
+    sha256 "c3a04bd31e32e4a0450b6c53e82eab94e6faa6c56f2e90861bac7eb1ad607e98"
   end
 
   def install
