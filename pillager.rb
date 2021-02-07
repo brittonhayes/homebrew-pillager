@@ -5,21 +5,21 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.4.0/pillager_0.4.0_Darwin_x86_64.tar.gz"
-    sha256 "1adc57c296136dda8b4cd7d6888eda5bb22fc26be0a4eb2b551c71f4f73456e7"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.4.1/pillager_0.4.1_Darwin_x86_64.tar.gz"
+    sha256 "ae298024c8af274d473104b192a3b9f097de13733b8b1f50a49ab52907cfc359"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.4.0/pillager_0.4.0_Linux_x86_64.tar.gz"
-    sha256 "1e5bb3c5335d57f57d97028ba7b44e558c00c350c6854ad7b40a3886337f9522"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.4.1/pillager_0.4.1_Linux_x86_64.tar.gz"
+    sha256 "5e7a2508bf38b1e80767ba2db7cd979a35a43ed10f0d0d0313b4603db6145b8a"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.4.0/pillager_0.4.0_Linux_arm64.tar.gz"
-    sha256 "e3ac8aef4c91d6f8329f9d783b84b2bf777d8732e06af03e23568441bfe16ef2"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.4.1/pillager_0.4.1_Linux_arm64.tar.gz"
+    sha256 "f3ca28188590671ab1b94439a1696df718ef3e136035500dded5c35de3713b4a"
   end
 
   def install
