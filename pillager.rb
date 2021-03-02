@@ -5,25 +5,25 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.5.7"
+  version "0.5.8"
   license "MIT"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.7/pillager_0.5.7_Darwin_x86_64.tar.gz"
-    sha256 "75d0ed52eaf023794c2479b71f87de02ce4b03e2d96132d2e1097e7d0665c305"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.8/pillager_0.5.8_Darwin_x86_64.tar.gz"
+    sha256 "7acf50e6a77b8a6c3d20155f1ab5a0f0b1bc0b2aa673dc476d545f0d8000e768"
   end
   if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.7/pillager_0.5.7_Darwin_arm64.tar.gz"
-    sha256 "6716dd93a2480bad9233167ee414a80918085fb2bba061ea549294967b01920e"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.8/pillager_0.5.8_Darwin_arm64.tar.gz"
+    sha256 "666e10f64b78d36f1bcc9bf02f95e75be889a831a891de754c8ba7aeb25677c4"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.7/pillager_0.5.7_Linux_x86_64.tar.gz"
-    sha256 "01dc8a7a44958b917c9726ba066806847c44dd091d2898bb0b7c562614a298cd"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.8/pillager_0.5.8_Linux_x86_64.tar.gz"
+    sha256 "413d99700d354b17ec3592b93dc68b91d1eee6bb0f962fe3371289d1f631e015"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.7/pillager_0.5.7_Linux_arm64.tar.gz"
-    sha256 "3b725d81d3bdfc22fcfc9cb01448373c42f48d84dde19d36d64f4a40cfa3592d"
+    url "https://github.com/brittonhayes/pillager/releases/download/v0.5.8/pillager_0.5.8_Linux_arm64.tar.gz"
+    sha256 "dd9a253855bd28586ffeb863ee5c93172774210c518c854d3c370f74cb4864ea"
   end
 
   def install
