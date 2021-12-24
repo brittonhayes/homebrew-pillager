@@ -5,33 +5,44 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.5.9"
+  version "0.5.10"
   license "MIT"
-  bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.9/pillager_0.5.9_Darwin_arm64.tar.gz"
-      sha256 "2dd5d161db22b97be37fd57081455dd53a75d2d02d9ce330c72fd2728dcca8b0"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.10/pillager_0.5.10_Darwin_arm64.tar.gz"
+      sha256 "a34e3d6ddb8752b2296ae245191a11d9d313236dd6a12d8b428144938f46b97f"
+
+      def install
+        bin.install "pillager"
+      end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.9/pillager_0.5.9_Darwin_x86_64.tar.gz"
-      sha256 "0b800c9bbb6c2e9b0192639946a3ecbc9b7df4b930c385fd39e0ac3e0963aaf4"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.10/pillager_0.5.10_Darwin_x86_64.tar.gz"
+      sha256 "e81aa0738a80b72197fba8949cf7cf582a918e29eaac92ea056f1235f0ca7a8b"
+
+      def install
+        bin.install "pillager"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.9/pillager_0.5.9_Linux_x86_64.tar.gz"
-      sha256 "02a71c0da59d968eceed366e3b7a1ece9449d6b4ea946716f94eeb4f3c114a18"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.9/pillager_0.5.9_Linux_arm64.tar.gz"
-      sha256 "12684a31a00a782477b49e028b39a8ac7def374b22749b4bc36726fe8d9a20c5"
-    end
-  end
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.10/pillager_0.5.10_Linux_arm64.tar.gz"
+      sha256 "099fde2046b46b2b36dc3951f7a992ed6df604baea778612fa816725143b1978"
 
-  def install
-    bin.install "pillager"
+      def install
+        bin.install "pillager"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.5.10/pillager_0.5.10_Linux_x86_64.tar.gz"
+      sha256 "8ea3a6f0edae5b52f0da6695d5f6c8417b61762a38e4e60f0fe17c52a056b005"
+
+      def install
+        bin.install "pillager"
+      end
+    end
   end
 end
