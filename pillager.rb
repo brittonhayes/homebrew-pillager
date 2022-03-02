@@ -5,21 +5,21 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.7.3"
+  version "0.7.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.3/pillager_0.7.3_Darwin_x86_64.tar.gz"
-      sha256 "1094810790644b0209463a7e92a3840170716408d43c369333eb53ddc820c7a6"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Darwin_x86_64.tar.gz"
+      sha256 "6713c889217622172b18d874f9dc0397581ca2155c193572a7e6e82866f2ea5a"
 
       def install
         bin.install "pillager"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.3/pillager_0.7.3_Darwin_arm64.tar.gz"
-      sha256 "9e037354bf717c713bdb18f6de72924fdf8c257b2e06c6d52762b556121c2ea5"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Darwin_arm64.tar.gz"
+      sha256 "901ebecf62cc53b02dbd3ae28f95bb4b7d9b532f3bf0670410c410a464bddedd"
 
       def install
         bin.install "pillager"
@@ -29,16 +29,16 @@ class Pillager < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.3/pillager_0.7.3_Linux_x86_64.tar.gz"
-      sha256 "e0b43e3562a220966101e50ccea1962b19d1ee3426205979c44b35dc44396d43"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Linux_x86_64.tar.gz"
+      sha256 "8bca1b587195635a19517342cc11a6ace1d1306bffac1189c5763578b9804be2"
 
       def install
         bin.install "pillager"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.3/pillager_0.7.3_Linux_arm64.tar.gz"
-      sha256 "c8bfcd371cd85b3d7bba7eafa60aee177ecc32ec24f54c2bd3baf5dd2439e541"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Linux_arm64.tar.gz"
+      sha256 "3245d1044352c443812099c6174a2d55bf9850d4e01509d520149cd61aa5093f"
 
       def install
         bin.install "pillager"
