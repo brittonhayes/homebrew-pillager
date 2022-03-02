@@ -5,21 +5,21 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.6.0"
+  version "0.7.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.6.0/pillager_0.6.0_Darwin_arm64.tar.gz"
-      sha256 "f18e7c8c4956c91c6bf84a49e8540967294fa72836ca5417aa4532af57473519"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.0/pillager_0.7.0_Darwin_arm64.tar.gz"
+      sha256 "c24e7ee578de882b0c58a8084a025fb3c0ee79a9508cf1ae61eb42fb78d4c675"
 
       def install
         bin.install "pillager"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.6.0/pillager_0.6.0_Darwin_x86_64.tar.gz"
-      sha256 "ebd4ccef412045ded0f9eae779c082f58c0da4cffa2eee139b8c53c7a7c9b242"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.0/pillager_0.7.0_Darwin_x86_64.tar.gz"
+      sha256 "6af14b95fae3bc9c18028a5a2cd8669ab9f1487d5c4006076e9b007c26c324a5"
 
       def install
         bin.install "pillager"
@@ -28,17 +28,17 @@ class Pillager < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.6.0/pillager_0.6.0_Linux_arm64.tar.gz"
-      sha256 "d1b730e6f475e0b8432d44791fd29dff456d0ffbe18606f61772dff9a36665dd"
+    if Hardware::CPU.intel?
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.0/pillager_0.7.0_Linux_x86_64.tar.gz"
+      sha256 "c9ac5a1eff5e6331c1d7e7a3701fdf538e713ad8860d9deb719e8ee8e80cec13"
 
       def install
         bin.install "pillager"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.6.0/pillager_0.6.0_Linux_x86_64.tar.gz"
-      sha256 "deb31d5b5e48cd47a38acb4bd9fca7e7b72df25bc47e41c732df5929b7dba0a8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.0/pillager_0.7.0_Linux_arm64.tar.gz"
+      sha256 "8817a75661723236c7cbecf83fd0f277dd057cf703946135e6a07fae86f18e06"
 
       def install
         bin.install "pillager"
