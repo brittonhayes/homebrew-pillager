@@ -5,21 +5,21 @@
 class Pillager < Formula
   desc "Pillage filesystems for sensitive information"
   homepage "https://github.com/brittonhayes/pillager"
-  version "0.7.4"
+  version "0.7.5"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Darwin_x86_64.tar.gz"
-      sha256 "6713c889217622172b18d874f9dc0397581ca2155c193572a7e6e82866f2ea5a"
+    if Hardware::CPU.arm?
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.5/pillager_0.7.5_Darwin_arm64.tar.gz"
+      sha256 "dd02e89a746586db86817f9d8c454b06a11d18708d0a1ec39be0e0688d103561"
 
       def install
         bin.install "pillager"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Darwin_arm64.tar.gz"
-      sha256 "901ebecf62cc53b02dbd3ae28f95bb4b7d9b532f3bf0670410c410a464bddedd"
+    if Hardware::CPU.intel?
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.5/pillager_0.7.5_Darwin_x86_64.tar.gz"
+      sha256 "938754503a32b98b550073c6105dd03408517eb23ca51b6f7bb6c6a94360e23c"
 
       def install
         bin.install "pillager"
@@ -29,16 +29,16 @@ class Pillager < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Linux_x86_64.tar.gz"
-      sha256 "8bca1b587195635a19517342cc11a6ace1d1306bffac1189c5763578b9804be2"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.5/pillager_0.7.5_Linux_x86_64.tar.gz"
+      sha256 "88488f7fbf83d372aa15c2668c6c49c25ce3c75b68a654a9dbc2d2caf71e72ff"
 
       def install
         bin.install "pillager"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.4/pillager_0.7.4_Linux_arm64.tar.gz"
-      sha256 "3245d1044352c443812099c6174a2d55bf9850d4e01509d520149cd61aa5093f"
+      url "https://github.com/brittonhayes/pillager/releases/download/v0.7.5/pillager_0.7.5_Linux_arm64.tar.gz"
+      sha256 "965f8dae456805464889bf7e7871aed1ae8da78904d6a6d2464a2d746a42db17"
 
       def install
         bin.install "pillager"
